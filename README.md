@@ -24,3 +24,4 @@ This repository contains code assignment finished as a part of TIDAL interview. 
 #### 5. Coil for image loading
 #### 6. Koin for DI
 #### 7. Navigation Component
+#### 8. Unit tests (not many, for display purpopses only)
