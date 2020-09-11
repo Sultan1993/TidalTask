@@ -1,0 +1,14 @@
+ext {
+
+    kotlinVersion = '1.4.10'
+    navigationVersion = '2.3.0'
+    koinVersion = '2.1.6'
+    lifecycleVersion = '2.2.0'
+
+    app = [
+            id: 'kz.maestrosultan.tidaltask',
+            minSDK: 21,
+            versionName: '1.0.0',
+            versionCode: 1
+    ]
+}

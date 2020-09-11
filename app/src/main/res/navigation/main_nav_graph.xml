@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_nav_graph"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="kz.maestrosultan.tidaltask.presentation.search.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_artistAlbumsFragment"
+            app:destination="@id/artistAlbumsFragment"
+            app:enterAnim="@anim/nav_slide_in_right"
+            app:exitAnim="@anim/nav_slide_out_left"
+            app:popEnterAnim="@anim/nav_slide_in_left"
+            app:popExitAnim="@anim/nav_slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistAlbumsFragment"
+        android:name="kz.maestrosultan.tidaltask.presentation.artist.ArtistAlbumsFragment"
+        android:label="ArtistAlbumsFragment" >
+        <argument
+            android:name="artistId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_artistAlbumsFragment_to_albumTracksFragment"
+            app:destination="@id/albumTracksFragment"
+            app:enterAnim="@anim/nav_slide_in_right"
+            app:exitAnim="@anim/nav_slide_out_left"
+            app:popEnterAnim="@anim/nav_slide_in_left"
+            app:popExitAnim="@anim/nav_slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumTracksFragment"
+        android:name="kz.maestrosultan.tidaltask.presentation.albums.AlbumTracksFragment"
+        android:label="AlbumTracksFragment" >
+        <argument
+            android:name="albumId"
+            app:argType="string" />
+    </fragment>
+</navigation>

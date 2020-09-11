@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TidalTask</string>
+
+    <!-- Common -->
+    <string name="retry">Retry</string>
+    <string name="error">Error occurred. Please, try again</string>
+
+    <!-- Artist Albums -->
+    <string name="artist_albums_title">Albums</string>
+
+    <!-- Album Tracks -->
+    <string name="album_tracks_volume_format">Volume %1$d</string>
+
+</resources>
