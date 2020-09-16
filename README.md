@@ -26,7 +26,8 @@ This repository contains code assignment finished as a part of TIDAL interview. 
 #### 7. Navigation Component
 #### 8. Unit tests (not many, for display purpopses only)
 
-### Screenshots
+
+#  Screenshots
 <p><a href="https://github.com/Sultan1993/TidalTask/blob/master/SCREENSHOTS/1.png" target="_blank"><img src="https://github.com/Sultan1993/TidalTask/blob/master/SCREENSHOTS/1.png" width="250" style="max-width:100%;"></a>
 <a href="https://github.com/Sultan1993/TidalTask/blob/master/SCREENSHOTS/2.png" target="_blank"><img src="https://github.com/Sultan1993/TidalTask/blob/master/SCREENSHOTS/2.png" width="250" style="max-width:100%;"></a>
 <a href="https://github.com/Sultan1993/TidalTask/blob/master/SCREENSHOTS/3.png" target="_blank"><img src="https://github.com/Sultan1993/TidalTask/blob/master/SCREENSHOTS/3.png" width="250" style="max-width:100%;"></a></p>
