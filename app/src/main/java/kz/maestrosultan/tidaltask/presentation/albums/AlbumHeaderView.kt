@@ -4,16 +4,16 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
-import android.view.View
+import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.palette.graphics.Palette
 import coil.bitmap.BitmapPool
 import coil.load
 import coil.size.Size
 import coil.transform.Transformation
-import kotlinx.android.synthetic.main.view_album_header.view.*
 import kz.maestrosultan.tidaltask.R
 import kz.maestrosultan.tidaltask.core.extensions.getColorCompat
+import kz.maestrosultan.tidaltask.databinding.ViewAlbumHeaderBinding
 import kz.maestrosultan.tidaltask.domain.entity.Album
 
 class AlbumHeaderView @JvmOverloads constructor(
@@ -22,15 +22,17 @@ class AlbumHeaderView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
+    private val binding =
+        ViewAlbumHeaderBinding.inflate(LayoutInflater.from(context), this, true)
+
     init {
-        View.inflate(context, R.layout.view_album_header, this)
         setBackgroundColor(context.getColorCompat(R.color.colorPrimary))
     }
 
     fun configure(album: Album) {
-        albumTitleLabel.text = album.title
-        albumArtistLabel.text = album.artist?.name
-        albumCover.load(album.coverLarge) {
+        binding.albumTitleLabel.text = album.title
+        binding.albumArtistLabel.text = album.artist?.name
+        binding.albumCover.load(album.coverLarge) {
             transformations(object : Transformation {
 
                 override fun key() = "paletteTransformer${System.currentTimeMillis()}"

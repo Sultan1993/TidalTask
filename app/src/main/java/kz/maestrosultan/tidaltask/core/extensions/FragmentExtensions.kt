@@ -40,7 +40,6 @@ fun View.showSnackbar(@StringRes text: Int, duration: Int = Snackbar.LENGTH_LONG
     showSnackBarInternal({ view -> Snackbar.make(view, text, duration) }, action)
 }
 
-//Customization to make it look like in design + like in Material 2.0
 private inline fun View.showSnackBarInternal(snackbarBuilder: (View) -> Snackbar, action: SnackbarAction? = null) {
     val snackbar = snackbarBuilder(this)
 

@@ -5,13 +5,9 @@ import androidx.databinding.BindingAdapter
 import coil.load
 import coil.transform.CircleCropTransformation
 
-@BindingAdapter(value = ["imageUrl", "circle"], requireAll = false)
-fun bindImageFromUrl(view: ImageView, imageUrl: String?, circle: Boolean = false) {
+@BindingAdapter("imageUrl")
+fun bindImageFromUrl(view: ImageView, imageUrl: String?) {
     view.load(imageUrl) {
         crossfade(true)
-
-        if (circle) {
-            transformations(CircleCropTransformation())
-        }
     }
 }
